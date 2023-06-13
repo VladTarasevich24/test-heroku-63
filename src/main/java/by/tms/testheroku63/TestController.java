@@ -1,2 +1,16 @@
-package by.tms.testheroku63;public class TestController {
+package by.tms.testheroku63;
+
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/test")
+public class TestController {
+
+    @GetMapping
+    public String greeting() {
+        return "Hello World!";
+    }
 }
